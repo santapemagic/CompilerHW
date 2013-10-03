@@ -40,7 +40,6 @@ private:
 	int	currentCodeNo;
 	string fileName;	//입력 파일명
 	CommandList outputList;
-	
 
 public:
 	Parser(string input);		//생성자
