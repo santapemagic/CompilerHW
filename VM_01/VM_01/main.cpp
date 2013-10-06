@@ -2,6 +2,7 @@
 
 using namespace std;
 
+int CodeWriter::TorF = 0;
 
 int main(int argc, char * argv[])
 {
@@ -13,9 +14,9 @@ int main(int argc, char * argv[])
 		return 0;
 	}
 
-	Parser parser(argv[1]);
-
-	//parser->
+	Parser* parser = new Parser(argv[1]);
+	
+	parser->startParsing();
 
 	return 0;
 }
