@@ -56,7 +56,7 @@ bool Parser::HasMoreCommands()
 		}
 
 	}
-	while(command == "\0"||(command[0]=='/'&&command[1]=='/'));		//공백이거나 주석만 있는 줄이면 넘어감.
+	while(command == "\0"||(command[0]=='/' && command[1]=='/'));		//공백이거나 주석만 있는 줄이면 넘어감.
 
 
 	if(fin.eof())
@@ -120,6 +120,7 @@ void Parser::startParsing()
 		{
 			index = arg2();			//index 저장
 		}
+		//arg2 있는거만 묶어서 따로 처리하면 효율이 좋을듯동..
 
 		if( c_type == C_ARITHMETIC )
 		{
@@ -129,6 +130,31 @@ void Parser::startParsing()
 		{
 			Writer->WritePushPop( c_type, segment, index );
 		}
+		else if( c_type == C_CALL )
+		{
+			Writer->WriteCall( segment, index );
+		}
+		else if( c_type == C_FUNCTION )
+		{
+			Writer->WriteFunction( segment, index );
+		}
+		else if( c_type == C_GOTO )
+		{
+			Writer->WriteGoto( segment );
+		}
+		else if( c_type == C_IF )
+		{
+			Writer->WriteIf( segment );
+		}
+		else if( c_type == C_LABEL )
+		{
+			Writer->WriteLabel( segment );
+		}
+		else if( c_type == C_RETURN )
+		{
+			Writer->WriteReturn();
+		}
+
 	}
 
 	cout << "Translating is successful!" << endl;

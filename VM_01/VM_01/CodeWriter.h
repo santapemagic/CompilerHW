@@ -29,6 +29,14 @@ public:
 	void SetFileName( string fileName );		//출력파일 오픈
 	void WriteArithmetic( string command );		//Arithmetic코드 변환
 	void WritePushPop( CommandType command, string segment, int index );	//push, pop 코드 변환
-
+	
+	void WriteInit();					
+	void WriteLabel( string label );	//label 관련 명령어 씀
+	void WriteGoto(	string label );		//goto 관련 명령어 씀
+	void WriteIf( string label );		//if-goto 관련 명령어 씀
+	void WriteCall( string funcName, int numArg );	//call 관련 명령어 씀
+	void WriteReturn();					//return 관련 명령어 씀
+	void WriteFunction( string funcName, int numLocals );	//function 관련 명령어 씀
+		
 };
 

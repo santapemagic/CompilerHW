@@ -25,7 +25,7 @@ void CodeWriter::WriteArithmetic( string command )
 {
 	if(command =="add")
 	{
-		outputFile<<"//ADD"<<endl;
+//		outputFile<<"//ADD"<<endl;
 		outputFile<<"@SP"<<endl;
 		outputFile<<"A=M-1"<<endl;
 		outputFile<<"D=M"<<endl;
@@ -39,7 +39,7 @@ void CodeWriter::WriteArithmetic( string command )
 	}
 	else if(command == "sub")
 	{
-		outputFile<<"//SUB"<<endl;
+//		outputFile<<"//SUB"<<endl;
 		outputFile<<"@SP"<<endl;
 		outputFile<<"A=M-1"<<endl;
 		outputFile<<"D=M"<<endl;
@@ -52,7 +52,7 @@ void CodeWriter::WriteArithmetic( string command )
 	}
 	else if(command == "neg")
 	{
-		outputFile<<"//NEG"<<endl;
+//		outputFile<<"//NEG"<<endl;
 		outputFile<<"@SP"<<endl;
 		outputFile<<"A=M-1"<<endl;
 		outputFile<<"D=-M"<<endl;
@@ -61,7 +61,7 @@ void CodeWriter::WriteArithmetic( string command )
 	}
 	else if(command == "eq")
 	{
-		outputFile<<"//EQ"<<endl;
+//		outputFile<<"//EQ"<<endl;
 		outputFile<<"@SP"<<endl;
 		outputFile<<"A=M-1"<<endl;
 		outputFile<<"D=M"<<endl;
@@ -92,7 +92,7 @@ void CodeWriter::WriteArithmetic( string command )
 	}
 	else if(command == "gt")
 	{
-		outputFile<<"//EQ"<<endl;
+//		outputFile<<"//EQ"<<endl;
 		outputFile<<"@SP"<<endl;
 		outputFile<<"A=M-1"<<endl;
 		outputFile<<"D=M"<<endl;
@@ -123,7 +123,7 @@ void CodeWriter::WriteArithmetic( string command )
 	}
 	else if(command == "lt")
 	{
-		outputFile<<"//EQ"<<endl;
+//		outputFile<<"//EQ"<<endl;
 		outputFile<<"@SP"<<endl;
 		outputFile<<"A=M-1"<<endl;
 		outputFile<<"D=M"<<endl;
@@ -154,7 +154,7 @@ void CodeWriter::WriteArithmetic( string command )
 	}
 	else if(command == "and")
 	{
-		outputFile<<"//AND"<<endl;
+//		outputFile<<"//AND"<<endl;
 		outputFile<<"@SP"<<endl;
 		outputFile<<"A=M-1"<<endl;
 		outputFile<<"D=M"<<endl;
@@ -167,7 +167,7 @@ void CodeWriter::WriteArithmetic( string command )
 	}
 	else if(command == "or")
 	{
-		outputFile<<"//OR"<<endl;
+//		outputFile<<"//OR"<<endl;
 		outputFile<<"@SP"<<endl;
 		outputFile<<"A=M-1"<<endl;
 		outputFile<<"D=M"<<endl;
@@ -180,7 +180,7 @@ void CodeWriter::WriteArithmetic( string command )
 	}
 	else if(command == "not")
 	{
-		outputFile<<"//NOT"<<endl;
+//		outputFile<<"//NOT"<<endl;
 		outputFile<<"@SP"<<endl;
 		outputFile<<"A=M-1"<<endl;
 		outputFile<<"D=!M"<<endl;
@@ -291,6 +291,41 @@ void CodeWriter::WritePushPop( CommandType command, string segment, int index )
 	{
 		//error
 	}
+}
+
+void CodeWriter::WriteInit()
+{
+
+}
+
+void CodeWriter::WriteLabel( string label )
+{
+
+}
+
+void CodeWriter::WriteGoto( string label )
+{
+
+}
+
+void CodeWriter::WriteIf( string label )
+{
+
+}
+
+void CodeWriter::WriteCall( string funcName, int numArg )
+{
+
+}
+
+void CodeWriter::WriteReturn()
+{
+
+}
+
+void CodeWriter::WriteFunction( string funcName, int numLocals )
+{
+
 }
 
 
