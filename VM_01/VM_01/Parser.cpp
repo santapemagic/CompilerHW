@@ -111,6 +111,8 @@ void Parser::startParsing()
 	{
 		advance();
 
+
+		//Writer->WriteInit(); //해줘야할듯
 		if( c_type != C_RETURN )
 		{
 			segment = arg1();		//segment에 argument의 segment를 저장
